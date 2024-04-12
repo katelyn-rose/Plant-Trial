@@ -42,5 +42,78 @@ ggplot(data = pet_data, aes(x = surv_month, y = growth_rate, color = irrigation)
 ```
 
 ```{r}
-# isolate arcto data
-arcto <- pet_data(select_if(species = "arcto"))
+ggplot(data = pet_data, aes(x = irrigation, y = growth_rate, fill = size)) +
+  geom_boxplot()
+  theme_minimal()
+```
+
+
+```{r}
+# mean PGI of Arcto by irrigation level
+pet_summary <- pet_data %>% 
+group_by(irrigation) %>% 
+  summarize(mean_growth = mean(growth_rate),
+        sd_growth = sd(growth_rate),
+        var_growth = var(growth_rate),
+        count_growth = length(growth_rate), 
+        se_growth = sd_growth/sqrt(count_growth),
+        margin_growth = qt(0.95, df = count_growth - 1) * se_growth)
+
+# plotting relationship
+ggplot(data = pet_summary, aes (y = mean_growth, x = irrigation, color = irrigation)) +
+   geom_point() +
+   geom_linerange(aes(ymin = mean_growth - margin_growth, ymax = mean_growth + margin_growth), linewidth = 0.5) +
+   labs(x = "Irrigation Level",
+        y = "Mean PGI") +
+   theme_bw()
+```
+
+
+```{r}
+# isolate species data
+ arcto <- pet_data %>% 
+   filter(species %in% "arcto")
+ 
+ arte <- pet_data %>% 
+   filter(species %in% "arte")
+ 
+ ceo <- pet_data %>% 
+   filter(species %in% "ceo")
+ 
+ dip <- pet_data %>% 
+   filter(species %in% "dip")
+ 
+ salvia <- pet_data %>% 
+   filter(species %in% "salvia")
+```
+
+
+```{r}
+arcto_summary <- arcto %>% 
+   group_by(irrigation) %>% 
+   summarize(mean_growth = mean(growth_rate),
+             sd_growth = sd(growth_rate),
+             var_growth = var(growth_rate),
+             count_growth = length(growth_rate),
+             se_growth = sd_growth/sqrt(count_growth),
+             margin_growth = qt(0.95, df = count_growth - 1) * se_growth)
+ 
+ # plotting relationship
+ ggplot(data = arcto_summary, aes (y = mean_growth, x = irrigation, color = irrigation)) +
+   geom_point() +
+   geom_linerange(aes(ymin = mean_growth - margin_growth, ymax = mean_growth + margin_growth), linewidth = 0.5) +
+   labs(x = "Irrigation Level",
+        y = "Mean PGI") +
+   theme_bw()
+```
+
+
+```{r}
+# anovas for arcto size and irrigation
+ arcto_irrigation_anova <- aov(growth_rate ~ irrigation, data = arcto)
+ 
+ arcto_size_anova <- aov(growth_rate ~ size, data = arcto)
+
+summary(arcto_irrigation_anova)
+summary(arcto_size_anova)
+```
