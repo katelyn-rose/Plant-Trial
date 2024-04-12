@@ -1,0 +1,48 @@
+
+```{r}
+library(tidyverse) # general usage
+library(here) # organization
+library(plotly) # interactive plots
+library(skimr) # quick glimpses at data
+library(naniar) # visualizing missing data
+library(magick) # inserting images into plots
+library(NatParksPalettes) # one example of color palette package
+library(patchwork) # putting plots together
+```
+
+```{r}
+arcto_data <- read.csv(here("data", "plant_trial_data_arcto.csv"))
+```
+
+```{r}
+arcto <- arcto_data %>%
+  mutate(month_order = as_factor(month),
+         month_order = fct_relevel(month, "Jan", "Feb", "Mar", "Apr", "May", 
+                                      "Jun", "Jul", "Aug", "Sept","Oct", "Nov", "Dec"))
+```
+
+```{r}
+ggplot(data = arcto, aes(x = month_order, y = growth_rate, color = irrigation)) +
+       geom_jitter(na.rm = TRUE) +
+  theme_grey()+
+  facet_wrap(~ size)
+```
+
+
+```{r}
+pet_data <- read.csv(here("data", "plantcodefinal.csv"))
+```
+
+```{r}
+pet <- pet_data %>%
+  mutate(month_order = as_factor(surv_month),
+         month_order = fct_relevel(month, "1", "2", "3", "4", "5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23"))
+```
+
+
+```{r}
+ggplot(data = pet_data, aes(x = surv_month, y = growth_rate, color = irrigation)) +
+       geom_jitter(na.rm = TRUE) +
+  theme_grey()+
+  facet_wrap(~species + size)
+```

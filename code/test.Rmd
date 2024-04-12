@@ -1,0 +1,31 @@
+```{r}
+library(tidyverse) # general usage
+library(here) # organization
+library(plotly) # interactive plots
+library(skimr) # quick glimpses at data
+library(naniar) # visualizing missing data
+library(magick) # inserting images into plots
+library(NatParksPalettes) # one example of color palette package
+library(patchwork) # putting plots together
+```
+
+```{r}
+arcto <- read.csv(here("data", "arcto.csv"))
+```
+
+```{r}
+arcto_clean <- arcto %>%
+  mutate(month_order = as_factor(Month),
+         Month = fct_relevel(Month, "Jan", "Feb", "Mar", "Apr", "May", 
+                                      "Jun", "Jul", "Aug", "Sept", "Dec"))
+```
+
+```{r}
+ggplot(data = arcto_clean, aes(x = month_order, y = Growth, color = Irrigation)) +
+       geom_jitter(na.rm = TRUE) +
+  theme_grey()+
+  facet_wrap(~ Size) 
+```
+
+
+

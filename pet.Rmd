@@ -1,0 +1,46 @@
+---
+title: "Plant Est Trial Data"
+author: "Katie Miller"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse) # general usage
+library(here) # organization
+library(plotly) # interactive plots
+library(skimr) # quick glimpses at data
+library(naniar) # visualizing missing data
+library(magick) # inserting images into plots
+library(NatParksPalettes) # one example of color palette package
+library(patchwork) # putting plots together
+library(GGally)
+library(ggeffects)
+library(flextable) 
+library(car)
+library(broom)
+library(corrplot)
+```
+
+
+```{r}
+# reading in data
+pet_data <- read.csv(here("data", "plantcodefinal.csv"))
+```
+
+
+```{r}
+# initial plot to visualize dataset
+ggplot(data = pet_data, aes(x = surv_month, y = growth_rate, color = irrigation)) +
+       geom_jitter(na.rm = TRUE) +
+  theme_bw()+
+  facet_wrap(~species + size)
+```
+
+```{r}
+# isolate arcto data
+arcto <- pet_data(select_if(species = "arcto"))

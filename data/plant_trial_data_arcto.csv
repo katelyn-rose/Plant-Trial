@@ -1,0 +1,79 @@
+﻿month,year,irrigation,species,size,growth_rate
+May,2022,high,arcto,"4"" ",11.65
+Jun,2022,high,arcto,"4"" ",9.575
+Jul,2022,high,arcto,"4"" ",9.775
+Aug,2022,high,arcto,"4"" ",9.675
+Sept,2022,high,arcto,"4"" ",9.575
+Oct,2022,high,arcto,"4"" ",10.4
+Nov,2022,high,arcto,"4"" ",11.425
+Dec,2022,high,arcto,"4"" ",11.925
+Jan,2023,high,arcto,"4"" ",11.1
+Feb,2023,high,arcto,"4"" ",11.875
+Mar,2023,high,arcto,"4"" ",13.075
+Apr,2023,high,arcto,"4"" ",12.65
+May,2023,high,arcto,"4"" ",12.625
+May,2022,low,arcto,"4"" ",10.475
+Jun,2022,low,arcto,"4"" ",8.55
+Jul,2022,low,arcto,"4"" ",9.725
+Aug,2022,low,arcto,"4"" ",11.1
+Sept,2022,low,arcto,"4"" ",10.575
+Oct,2022,low,arcto,"4"" ",10.3
+Nov,2022,low,arcto,"4"" ",9.9
+Dec,2022,low,arcto,"4"" ",11.15625
+Jan,2023,low,arcto,"4"" ",11.5625
+Feb,2023,low,arcto,"4"" ",11.9375
+Mar,2023,low,arcto,"4"" ",12.625
+Apr,2023,low,arcto,"4"" ",12.03125
+May,2023,low,arcto,"4"" ",15.65625
+May,2022,med,arcto,"4"" ",7.7
+Jun,2022,med,arcto,"4"" ",6.725
+Jul,2022,med,arcto,"4"" ",7.55
+Aug,2022,med,arcto,"4"" ",8.8125
+Sept,2022,med,arcto,"4"" ",9.34375
+Oct,2022,med,arcto,"4"" ",9
+Nov,2022,med,arcto,"4"" ",10.09375
+Dec,2022,med,arcto,"4"" ",9.375
+Jan,2023,med,arcto,"4"" ",9.875
+Feb,2023,med,arcto,"4"" ",10.21875
+Mar,2023,med,arcto,"4"" ",9.8125
+Apr,2023,med,arcto,"4"" ",11.375
+May,2023,med,arcto,"4"" ",13.34375
+May,2022,high,arcto,1gal,9.285714286
+Jun,2022,high,arcto,1gal,8.232142857
+Jul,2022,high,arcto,1gal,9.732142857
+Aug,2022,high,arcto,1gal,9.785714286
+Sept,2022,high,arcto,1gal,11.16071429
+Oct,2022,high,arcto,1gal,11.39285714
+Nov,2022,high,arcto,1gal,12.26785714
+Dec,2022,high,arcto,1gal,12.44642857
+Jan,2023,high,arcto,1gal,13.41071429
+Feb,2023,high,arcto,1gal,13.39285714
+Mar,2023,high,arcto,1gal,14.03571429
+Apr,2023,high,arcto,1gal,13.32142857
+May,2023,high,arcto,1gal,13.57142857
+May,2022,low,arcto,1gal,10.83333333
+Jun,2022,low,arcto,1gal,9.541666667
+Jul,2022,low,arcto,1gal,10.25
+Aug,2022,low,arcto,1gal,11.70833333
+Sept,2022,low,arcto,1gal,15.375
+Oct,2022,low,arcto,1gal,12.08333333
+Nov,2022,low,arcto,1gal,13.33333333
+Dec,2022,low,arcto,1gal,15.20833333
+Jan,2023,low,arcto,1gal,16.5
+Feb,2023,low,arcto,1gal,15.54166667
+Mar,2023,low,arcto,1gal,15.33333333
+Apr,2023,low,arcto,1gal,15.625
+May,2023,low,arcto,1gal,20.66666667
+May,2022,med,arcto,1gal,8.15
+Jun,2022,med,arcto,1gal,7.95
+Jul,2022,med,arcto,1gal,9.2
+Aug,2022,med,arcto,1gal,8.85
+Sept,2022,med,arcto,1gal,9.95
+Oct,2022,med,arcto,1gal,8.875
+Nov,2022,med,arcto,1gal,10.175
+Dec,2022,med,arcto,1gal,9.65
+Jan,2023,med,arcto,1gal,9.25
+Feb,2023,med,arcto,1gal,10.2
+Mar,2023,med,arcto,1gal,10.1
+Apr,2023,med,arcto,1gal,10.225
+May,2023,med,arcto,1gal,12.25
