@@ -89,7 +89,7 @@ ggplot(data = pet_summary, aes (y = mean_growth, x = irrigation, color = irrigat
 
 
 ```{r}
-arcto_summary <- arcto %>% 
+arcto_irrigation <- arcto %>% 
    group_by(irrigation) %>% 
    summarize(mean_growth = mean(growth_rate),
              sd_growth = sd(growth_rate),
@@ -99,7 +99,7 @@ arcto_summary <- arcto %>%
              margin_growth = qt(0.95, df = count_growth - 1) * se_growth)
  
  # plotting relationship
- ggplot(data = arcto_summary, aes (y = mean_growth, x = irrigation, color = irrigation)) +
+ ggplot(data = arcto_irrigation, aes (y = mean_growth, x = irrigation, color = irrigation)) +
    geom_point() +
    geom_linerange(aes(ymin = mean_growth - margin_growth, ymax = mean_growth + margin_growth), linewidth = 0.5) +
    labs(x = "Irrigation Level",
@@ -109,6 +109,25 @@ arcto_summary <- arcto %>%
 
 
 ```{r}
+arcto_size <- arcto %>% 
+   group_by(size) %>% 
+   summarize(mean_growth = mean(growth_rate),
+             sd_growth = sd(growth_rate),
+             var_growth = var(growth_rate),
+             count_growth = length(growth_rate),
+             se_growth = sd_growth/sqrt(count_growth),
+             margin_growth = qt(0.95, df = count_growth - 1) * se_growth)
+ 
+ # plotting relationship
+ ggplot(data = arcto_size, aes (y = mean_growth, x = size, color = size)) +
+   geom_point() +
+   geom_linerange(aes(ymin = mean_growth - margin_growth, ymax = mean_growth + margin_growth), linewidth = 0.5) +
+   labs(x = "Pot Size",
+        y = "Mean PGI") +
+   theme_bw()
+```
+
+```{r}
 # anovas for arcto size and irrigation
  arcto_irrigation_anova <- aov(growth_rate ~ irrigation, data = arcto)
  
@@ -116,4 +135,200 @@ arcto_summary <- arcto %>%
 
 summary(arcto_irrigation_anova)
 summary(arcto_size_anova)
+```
+
+```{r}
+arte_irrigation <- arte %>% 
+   group_by(irrigation) %>% 
+   summarize(mean_growth = mean(growth_rate),
+             sd_growth = sd(growth_rate),
+             var_growth = var(growth_rate),
+             count_growth = length(growth_rate),
+             se_growth = sd_growth/sqrt(count_growth),
+             margin_growth = qt(0.95, df = count_growth - 1) * se_growth)
+ 
+ # plotting relationship
+ ggplot(data = arte_irrigation, aes (y = mean_growth, x = irrigation, color = irrigation)) +
+   geom_point() +
+   geom_linerange(aes(ymin = mean_growth - margin_growth, ymax = mean_growth + margin_growth), linewidth = 0.5) +
+   labs(x = "Irrigation Level",
+        y = "Mean PGI") +
+   theme_bw()
+```
+
+
+```{r}
+arte_size <- arte %>% 
+   group_by(size) %>% 
+   summarize(mean_growth = mean(growth_rate),
+             sd_growth = sd(growth_rate),
+             var_growth = var(growth_rate),
+             count_growth = length(growth_rate),
+             se_growth = sd_growth/sqrt(count_growth),
+             margin_growth = qt(0.95, df = count_growth - 1) * se_growth)
+ 
+ # plotting relationship
+ ggplot(data = arte_size, aes (y = mean_growth, x = size, color = size)) +
+   geom_point() +
+   geom_linerange(aes(ymin = mean_growth - margin_growth, ymax = mean_growth + margin_growth), linewidth = 0.5) +
+   labs(x = "Pot Size",
+        y = "Mean PGI") +
+   theme_bw()
+```
+
+```{r}
+# anovas for arte size and irrigation
+ arte_irrigation_anova <- aov(growth_rate ~ irrigation, data = arte)
+ 
+ arte_size_anova <- aov(growth_rate ~ size, data = arte)
+
+summary(arte_irrigation_anova)
+summary(arte_size_anova)
+```
+
+```{r}
+ceo_irrigation <- ceo %>% 
+   group_by(irrigation) %>% 
+   summarize(mean_growth = mean(growth_rate),
+             sd_growth = sd(growth_rate),
+             var_growth = var(growth_rate),
+             count_growth = length(growth_rate),
+             se_growth = sd_growth/sqrt(count_growth),
+             margin_growth = qt(0.95, df = count_growth - 1) * se_growth)
+ 
+ # plotting relationship
+ ggplot(data = ceo_irrigation, aes (y = mean_growth, x = irrigation, color = irrigation)) +
+   geom_point() +
+   geom_linerange(aes(ymin = mean_growth - margin_growth, ymax = mean_growth + margin_growth), linewidth = 0.5) +
+   labs(x = "Irrigation Level",
+        y = "Mean PGI") +
+   theme_bw()
+```
+
+
+```{r}
+ceo_size <- ceo %>% 
+   group_by(size) %>% 
+   summarize(mean_growth = mean(growth_rate),
+             sd_growth = sd(growth_rate),
+             var_growth = var(growth_rate),
+             count_growth = length(growth_rate),
+             se_growth = sd_growth/sqrt(count_growth),
+             margin_growth = qt(0.95, df = count_growth - 1) * se_growth)
+ 
+ # plotting relationship
+ ggplot(data = ceo_size, aes (y = mean_growth, x = size, color = size)) +
+   geom_point() +
+   geom_linerange(aes(ymin = mean_growth - margin_growth, ymax = mean_growth + margin_growth), linewidth = 0.5) +
+   labs(x = "Pot Size",
+        y = "Mean PGI") +
+   theme_bw()
+```
+
+```{r}
+# anovas for ceo size and irrigation
+ ceo_irrigation_anova <- aov(growth_rate ~ irrigation, data = ceo)
+ 
+ ceo_size_anova <- aov(growth_rate ~ size, data = ceo)
+
+summary(ceo_irrigation_anova)
+summary(ceo_size_anova)
+```
+
+```{r}
+dip_irrigation <- dip %>% 
+   group_by(irrigation) %>% 
+   summarize(mean_growth = mean(growth_rate),
+             sd_growth = sd(growth_rate),
+             var_growth = var(growth_rate),
+             count_growth = length(growth_rate),
+             se_growth = sd_growth/sqrt(count_growth),
+             margin_growth = qt(0.95, df = count_growth - 1) * se_growth)
+ 
+ # plotting relationship
+ ggplot(data = dip_irrigation, aes (y = mean_growth, x = irrigation, color = irrigation)) +
+   geom_point() +
+   geom_linerange(aes(ymin = mean_growth - margin_growth, ymax = mean_growth + margin_growth), linewidth = 0.5) +
+   labs(x = "Irrigation Level",
+        y = "Mean PGI") +
+   theme_bw()
+```
+
+
+```{r}
+dip_size <- dip %>% 
+   group_by(size) %>% 
+   summarize(mean_growth = mean(growth_rate),
+             sd_growth = sd(growth_rate),
+             var_growth = var(growth_rate),
+             count_growth = length(growth_rate),
+             se_growth = sd_growth/sqrt(count_growth),
+             margin_growth = qt(0.95, df = count_growth - 1) * se_growth)
+ 
+ # plotting relationship
+ ggplot(data = dip_size, aes (y = mean_growth, x = size, color = size)) +
+   geom_point() +
+   geom_linerange(aes(ymin = mean_growth - margin_growth, ymax = mean_growth + margin_growth), linewidth = 0.5) +
+   labs(x = "Pot Size",
+        y = "Mean PGI") +
+   theme_bw()
+```
+
+```{r}
+# anovas for dip size and irrigation
+ dip_irrigation_anova <- aov(growth_rate ~ irrigation, data = dip)
+ 
+ dip_size_anova <- aov(growth_rate ~ size, data = dip)
+
+summary(dip_irrigation_anova)
+summary(dip_size_anova)
+```
+
+```{r}
+salvia_irrigation <- salvia %>% 
+   group_by(irrigation) %>% 
+   summarize(mean_growth = mean(growth_rate),
+             sd_growth = sd(growth_rate),
+             var_growth = var(growth_rate),
+             count_growth = length(growth_rate),
+             se_growth = sd_growth/sqrt(count_growth),
+             margin_growth = qt(0.95, df = count_growth - 1) * se_growth)
+ 
+ # plotting relationship
+ ggplot(data = salvia_irrigation, aes (y = mean_growth, x = irrigation, color = irrigation)) +
+   geom_point() +
+   geom_linerange(aes(ymin = mean_growth - margin_growth, ymax = mean_growth + margin_growth), linewidth = 0.5) +
+   labs(x = "Irrigation Level",
+        y = "Mean PGI") +
+   theme_bw()
+```
+
+
+```{r}
+salvia_size <- salvia %>% 
+   group_by(size) %>% 
+   summarize(mean_growth = mean(growth_rate),
+             sd_growth = sd(growth_rate),
+             var_growth = var(growth_rate),
+             count_growth = length(growth_rate),
+             se_growth = sd_growth/sqrt(count_growth),
+             margin_growth = qt(0.95, df = count_growth - 1) * se_growth)
+ 
+ # plotting relationship
+ ggplot(data = salvia_size, aes (y = mean_growth, x = size, color = size)) +
+   geom_point() +
+   geom_linerange(aes(ymin = mean_growth - margin_growth, ymax = mean_growth + margin_growth), linewidth = 0.5) +
+   labs(x = "Pot Size",
+        y = "Mean PGI") +
+   theme_bw()
+```
+
+```{r}
+# anovas for salvia size and irrigation
+ salvia_irrigation_anova <- aov(growth_rate ~ irrigation, data = salvia)
+ 
+ salvia_size_anova <- aov(growth_rate ~ size, data = salvia)
+
+summary(salvia_irrigation_anova)
+summary(salvia_size_anova)
 ```
