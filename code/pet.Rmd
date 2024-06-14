@@ -123,7 +123,8 @@ arcto_irrigation <- arcto %>%
    geom_point() +
    geom_linerange(aes(ymin = mean_growth - margin_growth, ymax = mean_growth + margin_growth), linewidth = 0.5) +
    labs(x = "Irrigation Level",
-        y = "Mean PGI") +
+        y = "Mean PGI",
+        title = "Arctostaphylos") +
    theme_bw()
 ```
 
@@ -144,7 +145,8 @@ arcto_size <- arcto %>%
    geom_point() +
    geom_linerange(aes(ymin = mean_growth - margin_growth, ymax = mean_growth + margin_growth), linewidth = 0.5) +
    labs(x = "Pot Size",
-        y = "Mean PGI") +
+        y = "Mean PGI",
+        title = "Arctostaphylos") +
    theme_bw()
 ```
 
@@ -173,7 +175,8 @@ arte_irrigation <- arte %>%
    geom_point() +
    geom_linerange(aes(ymin = mean_growth - margin_growth, ymax = mean_growth + margin_growth), linewidth = 0.5) +
    labs(x = "Irrigation Level",
-        y = "Mean PGI") +
+        y = "Mean PGI",
+        title = "Artemisia") +
    theme_bw()
 ```
 
@@ -193,7 +196,8 @@ arte_size <- arte %>%
    geom_point() +
    geom_linerange(aes(ymin = mean_growth - margin_growth, ymax = mean_growth + margin_growth), linewidth = 0.5) +
    labs(x = "Pot Size",
-        y = "Mean PGI") +
+        y = "Mean PGI",
+        title = "Artemisia") +
    theme_bw()
 ```
 
@@ -222,7 +226,8 @@ ceo_irrigation <- ceo %>%
    geom_point() +
    geom_linerange(aes(ymin = mean_growth - margin_growth, ymax = mean_growth + margin_growth), linewidth = 0.5) +
    labs(x = "Irrigation Level",
-        y = "Mean PGI") +
+        y = "Mean PGI",
+        title = "Ceanothus") +
    theme_bw()
 ```
 
@@ -242,7 +247,8 @@ ceo_size <- ceo %>%
    geom_point() +
    geom_linerange(aes(ymin = mean_growth - margin_growth, ymax = mean_growth + margin_growth), linewidth = 0.5) +
    labs(x = "Pot Size",
-        y = "Mean PGI") +
+        y = "Mean PGI",
+        title = "Ceanothus") +
    theme_bw()
 ```
 
@@ -271,7 +277,8 @@ dip_irrigation <- dip %>%
    geom_point() +
    geom_linerange(aes(ymin = mean_growth - margin_growth, ymax = mean_growth + margin_growth), linewidth = 0.5) +
    labs(x = "Irrigation Level",
-        y = "Mean PGI") +
+        y = "Mean PGI",
+        title = "Diplacus") +
    theme_bw()
 ```
 
@@ -291,7 +298,8 @@ dip_size <- dip %>%
    geom_point() +
    geom_linerange(aes(ymin = mean_growth - margin_growth, ymax = mean_growth + margin_growth), linewidth = 0.5) +
    labs(x = "Pot Size",
-        y = "Mean PGI") +
+        y = "Mean PGI",
+        title = "Diplacus") +
    theme_bw()
 ```
 
@@ -320,7 +328,8 @@ salvia_irrigation <- salvia %>%
    geom_point() +
    geom_linerange(aes(ymin = mean_growth - margin_growth, ymax = mean_growth + margin_growth), linewidth = 0.5) +
    labs(x = "Irrigation Level",
-        y = "Mean PGI") +
+        y = "Mean PGI",
+        title = "Salvia") +
    theme_bw()
 ```
 
@@ -340,7 +349,8 @@ salvia_size <- salvia %>%
    geom_point() +
    geom_linerange(aes(ymin = mean_growth - margin_growth, ymax = mean_growth + margin_growth), linewidth = 0.5) +
    labs(x = "Pot Size",
-        y = "Mean PGI") +
+        y = "Mean PGI",
+        title = "Salvia") +
    theme_bw()
 ```
 
@@ -394,7 +404,8 @@ arcto_reframe_irr <- arcto_reframe %>%
    geom_point() +
    geom_linerange(aes(ymin = mean_growth - margin_growth, ymax = mean_growth + margin_growth), linewidth = 0.5) +
    labs(x = "Irrigation Level",
-        y = "Mean PGI") +
+        y = "Mean PGI",
+        title = "Arctostaphylos") +
    theme_bw()
 ```
 
@@ -414,7 +425,8 @@ arcto_reframe_size <- arcto_reframe %>%
    geom_point() +
    geom_linerange(aes(ymin = mean_growth - margin_growth, ymax = mean_growth + margin_growth), linewidth = 0.5) +
    labs(x = "Pot Size",
-        y = "Mean PGI") +
+        y = "Mean PGI",
+        title = "Arctostaphylos") +
    theme_bw()
 ```
 
@@ -451,7 +463,8 @@ arte_reframe_irr <- arte_reframe %>%
    geom_point() +
    geom_linerange(aes(ymin = mean_growth - margin_growth, ymax = mean_growth + margin_growth), linewidth = 0.5) +
    labs(x = "Irrigation Level",
-        y = "Mean PGI") +
+        y = "Mean PGI",
+        title = "Artemisia") +
    theme_bw()
 ```
 
@@ -471,7 +484,8 @@ arte_reframe_size <- arte_reframe %>%
    geom_point() +
    geom_linerange(aes(ymin = mean_growth - margin_growth, ymax = mean_growth + margin_growth), linewidth = 0.5) +
    labs(x = "Pot Size",
-        y = "Mean PGI") +
+        y = "Mean PGI",
+        title = "Artemisia") +
    theme_bw()
 ```
 
@@ -509,7 +523,8 @@ ceo_reframe_irr <- ceo_reframe %>%
    geom_point() +
    geom_linerange(aes(ymin = mean_growth - margin_growth, ymax = mean_growth + margin_growth), linewidth = 0.5) +
    labs(x = "Irrigation Level",
-        y = "Mean PGI") +
+        y = "Mean PGI",
+        title = "Ceanothus") +
    theme_bw()
 ```
 
@@ -529,7 +544,8 @@ ceo_reframe_size <- ceo_reframe %>%
    geom_point() +
    geom_linerange(aes(ymin = mean_growth - margin_growth, ymax = mean_growth + margin_growth), linewidth = 0.5) +
    labs(x = "Pot Size",
-        y = "Mean PGI") +
+        y = "Mean PGI",
+        title = "Ceanothus") +
    theme_bw()
 ```
 
@@ -567,7 +583,8 @@ dip_reframe_irr <- dip_reframe %>%
    geom_point() +
    geom_linerange(aes(ymin = mean_growth - margin_growth, ymax = mean_growth + margin_growth), linewidth = 0.5) +
    labs(x = "Irrigation Level",
-        y = "Mean PGI") +
+        y = "Mean PGI",
+        title = "Diplacus") +
    theme_bw()
 ```
 
@@ -587,7 +604,8 @@ dip_reframe_size <- dip_reframe %>%
    geom_point() +
    geom_linerange(aes(ymin = mean_growth - margin_growth, ymax = mean_growth + margin_growth), linewidth = 0.5) +
    labs(x = "Pot Size",
-        y = "Mean PGI") +
+        y = "Mean PGI",
+        title = "Diplacus") +
    theme_bw()
 ```
 
@@ -626,7 +644,8 @@ salvia_reframe_irr <- salvia_reframe %>%
    geom_point() +
    geom_linerange(aes(ymin = mean_growth - margin_growth, ymax = mean_growth + margin_growth), linewidth = 0.5) +
    labs(x = "Irrigation Level",
-        y = "Mean PGI") +
+        y = "Mean PGI",
+        title = "Salvia") +
    theme_bw()
 ```
 
@@ -646,7 +665,8 @@ salvia_reframe_size <- salvia_reframe %>%
    geom_point() +
    geom_linerange(aes(ymin = mean_growth - margin_growth, ymax = mean_growth + margin_growth), linewidth = 0.5) +
    labs(x = "Pot Size",
-        y = "Mean PGI") +
+        y = "Mean PGI",
+        title = "Salvia") +
    theme_bw()
 ```
 
@@ -667,7 +687,8 @@ ggplot(data = arcto_reframe, aes(x = surv_month, y = growth_rate, color = irriga
   theme_bw()+
   facet_wrap(~size)+
   labs(x = "survey month",
-       y = "plant growth index")+
+       y = "plant growth index",
+       title = "Arctostaphylos")+
   geom_abline(slope=0.284, intercept=9.285)
 ```
 
